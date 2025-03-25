@@ -137,3 +137,10 @@ __MACOSX
 
 # data folder
 data/
+data/*.csv
+models/*.sav
+mlruns
+models/*
+
+#config file has sensitive data
+.mlflow_uri
