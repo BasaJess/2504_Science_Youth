@@ -1,15 +1,23 @@
-Presenting a proof of concept (PoC) effectively is about demonstrating that your idea is feasible and that you've taken the necessary steps to validate it. Here’s a structured approach to presenting your PoC:
+## Proof of Concept (PoC):
+---
 
-1. Introduction & Problem Statement
-Brief Background: Start by introducing the broader problem or opportunity your PoC addresses. For example, you might say, "There’s growing interest in longevity research, but manually sifting through vast amounts of scientific papers is time-consuming."
+Objective: Extract the latest reliable scientific findings to extend human healthspan, using Natural Language Processing (NLP) models or any other ML methods. Extract meaningful relationships between specific kewywords, approved drugs, and interventions and filter the results from Noise and unfounded or commercial interest.​ Finaly present for Public access in the Web. 
 
-Define the Problem: Explain the specific challenge your PoC is solving, such as: "The problem is the difficulty of quickly extracting actionable insights from scientific papers on human youth longevity."
+1. Introduction & Problem Statement:
+There’s growing interest in longevity research, but manually sifting through vast amounts of scientific papers is time-consuming. According to experts in the field, nowadays there is a scientific paper on regards to this topic published every 20 min. Additionally there are many commercial interests and more and more Dietary Supplements Companies claim to have found the fountain of youth to sell their products. Finally there are news outlets publishing stories related to this topic but without providing new or fundamented information. 
 
-Your Objective: Clearly state the goal of your PoC: "To demonstrate an automated system that retrieves and analyzes scientific articles on human longevity and extracts relevant insights using NLP."
+Thus a quick Broswer or ChatGPT search does not give good results, an automated system that retrieves and analyzes scientific articles on human longevity and extracts relevant insights using NLP is of great help for the people interested.
 
-2. Solution Overview
-Explain the Approach: Outline the process you’ve used to solve the problem. Mention the key components like data retrieval, NLP analysis, and insight extraction. For example, "Our system uses PubMed’s API to gather research articles, then processes them with NLP models to summarize findings and extract key terms."
+2. Scope:
+In an initial Iteration we will limit the dataset to a recognized Public Scientific Database, taking only around 1000 PDF documents, later more Databases can be included.
+The book "Lifespan" by Dr. David Sinlcair in PDF form can also be used as a trainning or reference source.
 
+3. Solution Overview
+
+Our system uses arvix.org API to gather research articles, then processes them with NLP models to summarize findings and extract key terms.
+ - Data Acquisition: For the first 3 days 1000 PDF Scientific papers will be collected and stored in an AWS Bucket using a list of 69 related Keywords to find a subset of abstracts focusing on lifespan extension studies.​
+
+**
 Technology Stack: Briefly mention the tools and technologies you used, such as PubMed API, Python (for data processing), spaCy (for NLP), Hugging Face (for summarization), and Plotly (for visualization).
 
 3. Demonstration
@@ -54,17 +62,7 @@ Open the floor for questions and feedback. Be prepared to answer technical quest
 
 ---
 
-Proof of Concept (PoC):
-
-Objective: Demonstrate the feasibility of using Natural Language Processing (NLP) to extract meaningful relationships between genes, pathways, drugs, and interventions related to lifespan extension.​
-
-Scope:
-
-Data Acquisition:
-
-Collect a subset of PubMed abstracts focusing on lifespan extension studies.​
-
-Retrieve relevant entries from DrugBank pertaining to drugs with known or potential effects on aging.​
+​
 
 Data Preprocessing:
 
@@ -89,6 +87,8 @@ Evaluation:
 Assess the accuracy of entity extraction and relationship identification.​
 
 Validate the knowledge graph's coherence and its alignment with existing scientific literature.​
+
+---
 
 Milestones:
 
