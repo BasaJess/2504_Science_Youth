@@ -14,7 +14,7 @@ The book "Lifespan" by Dr. David Sinlcair in PDF form can also be used as a trai
 
 #### 3. Solution Overview
 
-Our system will use first arvix.org API to gather research articles, then processes them with NLP models to summarize findings and extract key terms.
+ - Our system will use first arvix.org API to gather research articles, then processes them with NLP models to summarize findings and extract key terms.
  - Data Acquisition: For the first 3 days 1000 PDF Scientific papers will be collected and stored in an AWS Bucket using a list of 69 related Keywords to find a subset of abstracts focusing on lifespan extension studies.​
  - Data Preprocessing: Clean and normalize text data from pulled abstracts.​
  - NLP Implementation: Utilize transformer models (e.g., BERT) to extract entities such as gene therapy, known drugs extending healthspan, genetic pathways and other keywords from the text. Perhaps identify and classify relationships between these entities based on co-occurrence and contextual analysis.
@@ -36,6 +36,34 @@ Our system will use first arvix.org API to gather research articles, then proces
 
 #### 5. Technical Details
  - Data Pipeline: Flow diagram or a simple walkthrough of the code.
+
+ ***
+ - Step 1. Data retrieval:
+
+   - APIs for Scientific Articles:
+     - PubMed API (For biomedical research)
+     - arXiv API (open-access scientific papers)
+     - Semantic Scholar API (wide range of research papers)
+     - CrossRef API (DOI-based paper research)
+  - Web Scraping
+    - Use Scrapy or BeautifulSop for open-access journals.
+    - Check on permissions and legal use.
+ - Step 2. Preprocessing and Storage:
+
+   - Convert PDFs to text using pdfminer or PyMuPDF.
+   - Clean data (keep references, figures, etc.)
+   - Store in a structured format (maybe use a AWS or Azure Database)
+ - Step 3. NLP for Information Extraction:
+
+   - Named Entity Recognition. Identify key terms like “Telomere length”, “Epigenetics”, MTor, etc
+   - Summarization. Use transformers (BART, T5 or Pegasus) to generate summaries.
+   - Keyword Extraction. Use TF-IDF, YAKE, or KeyBERT to highlight main topics.
+   - Relation Extraction: Train a model to detect causal links (e.g. “finding extends healthspan”)
+ - Step 4. Analysis and Insights:
+
+   - Use vector databases (FAISS, ChromaDB) for semantic search.
+   - Build a chatbot or dashboard to query the findings inside a live website.
+ ***
 
  - Key Algorithms Used: Algorithms and models used (e.g., Named Entity Recognition, Topic Modeling, Summarization), and why they were chosen.
 
