@@ -1,81 +1,5 @@
-## ![](/images/pexels-googledeepmind-17484975.jpg) 
 
-![]
-
-# **UPDATE LATEST SCIENTIFIC FINDINGS IN YOUTH EXTENSION**
-
-## 08.mar.2025
-
-**─**
-
-Jesus Gonzalez  
-Data Science and IT Support   
-Am Lindenbaum 71  
-Frankfurt am Main, GE
-
-# **Overview**
-
-Lifespan and Healthspan research have grown exponentially in the last decades. Keeping up with the latest findings has becoming increasingly challenging 
-
-# **Goal**
-
-1. Use NLP (Natural Language Processing) to mine research papers and chemical databases to identify existing drugs with potential lifespan extending properties.
-
-2. Build a knowledge graph linking genes, pathways, drugs, and interventions associated with lifespan extension
-
-# **Specifications**
-
-## Datasets:
-
-PubMed abstracts,
-
-DrugBank.
-
-BioGRID
-
-String
-
-Literature mining
-
-## Tools:
-
-NLP
-
-Transformers like BERT
-
-Clustering Algorithms
-
-Knowledge Graphs
-
-Neo4j
-
-networkX
-
-Graph algorithms
-
-# **Milestones**
-
-1. ## Goal definition
-
-   Expand and update (ongoing), no unnecessary text, clear and succinct.
-
-2. ## Databases identification
-
-   Check which public databases are available.
-
-   Check which databases are available through my Alma Mater
-
-3. ## ML Tools Knowledge.
-
-List them here
-
-4. ## Define Timeline
-
-   
-
-   
-
-# **Drawing Board:**
+# **NLP:**
 
 Natural Language Processing (NLP) is a field of artificial intelligence that focuses on the interaction between computers and human language. It enables machines to understand, interpret, and generate human language in a valuable way.
 
@@ -156,42 +80,7 @@ Use deep learning to create a model that can generate summaries of long articles
 
 Identify and classify key information like names, dates, and locations in relevant documents
 
-# **Pipeline:**
 
-Step 1\. Data retrieval:
 
-1. APIs for Scientific Articles:  
-   1. PubMed API (For biomedical research)  
-   2. arXiv API (open-access scientific papers)  
-   3. Semantic Scholar API (wide range of research papers)  
-   4. CrossRef API (DOI-based paper research)  
-2. Web Scraping  
-   1. Use Scrapy or BeautifulSop for open-access journals.  
-   2. Check on permissions and legal use.
-
-Step 2\. Preprocessing and Storage:
-
-1. Convert PDFs to text using pdfminer or PyMuPDF.  
-2. Clean data (keep references, figures, etc.)  
-3. Store in a structured format (maybe use a AWS or Azure Database)
-
-Step 3\. NLP for Information Extraction:
-
-1. Named Entity Recognition. Identify key terms like “Telomere length”, “Epigenetics”, MTor, etc  
-2. Summarization. Use transformers (BART, T5 or Pegasus) to generate summaries.  
-3. Keyword Extraction. Use TF-IDF, YAKE, or KeyBERT to highlight main topics.  
-4. Relation Extraction: Train a model to detect causal links (e.g. “finding extends healthspan”)
-
-Step 4\. Analysis and Insights:
-
-1. Use vector databases (FAISS, ChromaDB) for semantic search.  
-2. Build a chatbot or dashboard to query the findings.
-
-# **Remarks:**
-
-Scraping the Internet for Scientific Articles is not practical because:
-
-1. Access restrictions  
-2. Legal Issues  
-3. Computational Costs 
+ 
 
