@@ -5,7 +5,25 @@ Since our databse is unlabeled, we have few options for evaluating our BERT base
 #### 1. Unsupersived Evaluation (Baseline Model)
  - ***Topic Coherence (UMass, UCI, or NPMI):*** If we use topic modeling as a preprocessing step (e.g., clustering papers based on embeddings), coherence measures how meaningful the topics are.
  - ***Clustering metrics (Silhouette Score, Davies-Bouldin Index, Dunn Index):*** These mesure the separation and cohesion of the clusters.
- - ***Embedding Similarity (Cosime Similarity, Euclidian Distance):*** Masures how close soimilar papers are in the embedding space.
+   - *Silhouette Score:*
+     - Measures how well each sample is clustered.
+     - Ranges from -1 (bad) to 1 (good).
+     - Higher values mean better separation between clusters.
+   - *Davies-Bouldin Index:* 
+     - Measures cluster compactness and separation.
+     - Lower values indicate better clustering.
+   - *Inertia (Elbow method):*
+     - Measures within-cluster variance.
+     - Helps determine the optimal number of clusters.  
+ - ***Embedding Similarity (Cosime Similarity, Euclidian Distance):*** Measures how close soimilar papers are in the embedding space.
+ - ***Qualitative Validation: Manual inspection:*** 
+   - *Check Clustered Papers*(from file. e.g. clustered_papers.json)
+     - Open and review grouped papers.
+     - Are similar topics grouped together?
+   - *Check Cluster Visualization*
+     - Look at the PCA plot.
+     - If clusters are well-separated, it's a good sign. 
+
 
  #### 2. Supervised Evaluation (After Fine-Tuning)
  - ***Classification Metrics (Accuracy, Precision, recall, F-1 score, AUC-ROC):*** These metrics measure classification performance.
@@ -15,7 +33,7 @@ Since our databse is unlabeled, we have few options for evaluating our BERT base
  - ***Named Entity recognition (NER) metrics (Precision, recall, F1-score):*** We can use NER techniques and compare against a small labeled set.
  - ***Exact Match (EM) Score:*** If extracting  structured biliographic information, EM measures how well the model retrieves exact references.
  ---
- #### Impementation:
+ #### Implementation:
 
  - Baseline:
 
@@ -32,7 +50,7 @@ Since our databse is unlabeled, we have few options for evaluating our BERT base
  labels = kmeans.labels_
 
  # Compute clustering metrics
- silhouette = slohouette_scoe(embeddings, labels)
+ silhouette = slohouette_score(embeddings, labels)
  davies_bouldin = davies_bouldin_score(embeddings, lables)
 
  print(f"Silhouette Score: {silhoulette})"
