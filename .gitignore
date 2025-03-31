@@ -144,3 +144,7 @@ models/*
 
 #config file has sensitive data
 .mlflow_uri
+
+# results folder can be too large
+results/
+results/*
