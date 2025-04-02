@@ -19,3 +19,4 @@ transformers
 tqdm
 fpdf
 pypdf
+pdfplumber
